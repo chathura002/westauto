@@ -1,5 +1,5 @@
 /*
-Theme Name: SBESNZ
+Theme Name: West Auto
 Theme URI: http://underscores.me/
 Author: Chathura Bandara
 Author URI: http://underscores.me/
@@ -501,7 +501,7 @@ a {
 }
 
 a:visited {
-/*    color: purple;*/
+    /*    color: purple;*/
     color: #337ab7;
 }
 
@@ -893,44 +893,87 @@ object {
 # Header Styles
 --------------------------------------------------------------*/
 .top-red{
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4622b+0,cc2128+51,a32330+100 */
-    background: #d4622b; /* Old browsers */
-    background: -moz-linear-gradient(left,  #d4622b 0%, #cc2128 51%, #a32330 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d4622b), color-stop(51%,#cc2128), color-stop(100%,#a32330)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  #d4622b 0%,#cc2128 51%,#a32330 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  #d4622b 0%,#cc2128 51%,#a32330 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  #d4622b 0%,#cc2128 51%,#a32330 100%); /* IE10+ */
-    background: linear-gradient(to right,  #d4622b 0%,#cc2128 51%,#a32330 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4622b', endColorstr='#a32330',GradientType=1 ); /* IE6-9 */
-    font-family: 'Droid Sans', sans-serif;
+    background: rgb(83,7,7);
+    background: -moz-linear-gradient(left, rgb(83,7,7) 0%, rgb(192,34,5) 50%, rgb(83,7,7) 100%);
+    background: -webkit-linear-gradient(left, rgb(83,7,7) 0%,rgb(192,34,5) 50%,rgb(83,7,7) 100%);
+    background: linear-gradient(to right, rgb(83,7,7) 0%,rgb(192,34,5) 50%,rgb(83,7,7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#530707', endColorstr='#530707',GradientType=1 );
+    font-family: 'Russo One', sans-serif;
     color: #fff;
     padding: 10px 0;
+}
+@media only screen and (max-width: 768px){
+    .top-red{
+        font-size: 11px !important;
+    }
 }
 .top-red #top-red-wrap a, a:visited, a:active, a:focus{
     color: #fff;
 }
 .top-red #top-red-wrap a:hover{
-    color: #000;
+    color: #242426;
+}
+.top-red #top-red-wrap .text-left{
+    text-align: left;
+}
+.top-red #top-red-wrap .text-center{
+    text-align: center;
+}
+.top-red #top-red-wrap .text-right{
+    text-align: right;
+}
+@media only screen and (max-width: 767px){
+    .top-red #top-red-wrap .text-left{
+        text-align: center;
+    }
+    .top-red #top-red-wrap .text-center{
+        text-align: center;
+    }
+    .top-red #top-red-wrap .text-right{
+        text-align: center;
+    }
 }
 .top-red i{
     padding-right: 5px;
 }
 nav ul{
-    font-family: 'Droid Sans', sans-serif;
+    /*    font-family: 'Droid Sans', sans-serif;*/
+    font-family: 'Russo One', sans-serif;
 }
 .navbar-nav > li > a:hover{
-    color: #cc2128;
+    color: #c02205;
+}
+.navbar-brand > img{
+    max-width: 50%;
+}
+.navbar-default{
+    margin-bottom: 40px;
+}
+.navbar-default .navbar-nav > li > a{
+    color:#000000 !important;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color:#bb2105 !important;
+}
+@media only screen and (max-width: 767px){
+    .navbar-brand > img{
+        max-width: 100%;
+    }
+    .navbar-default{
+        margin-bottom: 0px;
+    }  
 }
 .blue-bar{
-    background: rgba(59,177,220,1);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(59,177,220,1)), color-stop(51%, rgba(31,138,188,1)), color-stop(100%, rgba(42,74,113,1)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
-    background: radial-gradient(ellipse at center, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bb1dc', endColorstr='#2a4a71', GradientType=1 );
-    height: auto;
+    background-color: #000000;
+    /*    background: rgba(59,177,220,1);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(59,177,220,1)), color-stop(51%, rgba(31,138,188,1)), color-stop(100%, rgba(42,74,113,1)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
+        background: radial-gradient(ellipse at center, rgba(59,177,220,1) 0%, rgba(31,138,188,1) 51%, rgba(42,74,113,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bb1dc', endColorstr='#2a4a71', GradientType=1 );
+        height: auto;*/
     margin: 2px 0;
     font-family: 'Oswald', sans-serif;
     color: #fff;
@@ -954,11 +997,11 @@ nav ul{
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .navbar-center {
-    float: none !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .navbar-center {
+        float: none !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 /*--------------------------------------------------------------
 # Index page styles
@@ -969,7 +1012,7 @@ nav ul{
 }
 
 #container-wrap{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Metrophobic', sans-serif;
     color: #000; 
 }
 
@@ -981,7 +1024,7 @@ nav ul{
     padding: 10px 0;
     text-align: center;
     margin: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Russo One', sans-serif;
 }
 
 #container-wrap .wrap{
@@ -1019,6 +1062,13 @@ nav ul{
 
 #container-wrap #blog-wrap h4{
     text-align: left;
+}
+
+.inro{
+    width: 100%;
+    background-color: #aaa;//#E88B1A;
+    padding: 20px;
+    color: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -1083,11 +1133,28 @@ nav ul{
 --------------------------------------------------------------*/
 
 #container-wrap #testimonials .column-wrap{
-    -moz-column-width: 20em;
-    -webkit-column-width: 20em;
+    /*    -moz-column-width: 20em;
+        -webkit-column-width: 20em;
+        -moz-column-gap: 1em;
+        -webkit-column-gap: 1em;*/
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
     -moz-column-gap: 1em;
     -webkit-column-gap: 1em;
 }
+
+@media only screen and (max-width: 500px) {
+    #container-wrap #testimonials .column-wrap{
+        -moz-column-width: 20em;
+        -webkit-column-width: 20em;
+        -moz-column-gap: 1em;
+        -webkit-column-gap: 1em;
+        -moz-column-gap: 1em;
+        -webkit-column-gap: 1em;
+    }
+}
+
 
 #container-wrap #testimonials .item-wrap{
     display: inline-block;
@@ -1219,12 +1286,60 @@ nav ul{
 /*--------------------------------------------------------------
 # Services Page Styles
 --------------------------------------------------------------*/
+#container-wrap #service-wrap{
+
+}
+
+#container-wrap #service-wrap ul{
+    list-style: none;
+    padding: 10px;
+    margin: 0px;
+    /*    text-align: center;*/
+    background-color: #eceff1;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+#container-wrap #service-wrap ul li{
+    /*    border-bottom: solid 1px #ccc;*/
+    margin-top: 8px;
+}
+
+#container-wrap #service-wrap ul li:before{
+    content: "\f144";
+    font-family: FontAwesome;
+    display: inline-block;
+    /* margin-left: -1.3em; */
+    width: 1.3em;
+    color: #bf2205;
+}
+
 #container-wrap #service-wrap button{
     width: 100%;
 }
 
 #container-wrap #sbes-services #service-wrap{
     margin-bottom: 20px;
+}
+
+#container-wrap #sbes-services{
+    background-color: #eceff1;
+    padding: 10px;
+/*    -webkit-clip-path: polygon(0 0, 65% 0, 53% 100%, 0 100%);
+    clip-path: polygon(0 0, 65% 0, 53% 100%, 0 100%);*/
+}
+
+#container-wrap #sbes-services .img-container{
+    /*    width: 100%;*/
+    height: 100%;
+    background-color: #39cccc;
+    background-size: cover;
+
+}
+
+.parallax-window {
+    width: 100%;
+    background: transparent;
 }
 
 /*--------------------------------------------------------------

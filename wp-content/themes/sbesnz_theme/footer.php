@@ -34,7 +34,7 @@
                 </ul>
             </div>
             <div class="col-lg-12" id="site-info">
-                <small>© 2015 Small Business & Employment Solutions New Zealand | Designed by C-Creations</small>
+                <small>© 2017/18 West Auto New Zealand | Designed by C-Creations</small>
             </div><!-- .site-info -->
         </div>
 

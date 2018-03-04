@@ -15,76 +15,36 @@ get_header();
 
 <div class="main-container" id="container-wrap">
     <!--section-1 services, category- small business-->
+    <div class="blue-bar margin-maker" style="margin-bottom: 0px;"><h4>Welcome to West Auto</h4></div>
+    <p class="text-center inro">We are a complete one stop solution for your needs on Automotive Collision repairs (Insurance & Private),<br> Repair Certification, Panel beating, Painting and touch-ups, Rust repairs,<br> Mechanical repairs and Diagnosing & Electrical repairs.</p>
     <section class="row">
-        <div class="blue-bar margin-maker" style="margin-top: 0!important;"><h4>SMALL BUSINESS SERVICES</h4></div>
         <?php
         $args = array(
             'post_type' => 'services',
             'post_status' => 'publish',
             'showposts' => -1,
-            'tax_query' => array(array(
-                    'taxonomy' => 'category',
-                    'field' => 'slug',
-                    'terms' => 'small-business'
-                )),
-            'orderby' => 'date',
-            'order' => 'DESC'
+            'orderby' => 'post_date',
+            'order' => 'ASC'
         );
         $loop = new WP_Query($args);
-        if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
-                ?>
-                <div class="col-md-3 col-xs-6" id="service-wrap">
-                    <?php
-                    if (has_post_thumbnail()) {
-                        the_post_thumbnail();
-                    }
-                    ?>
+        //var_dump($loop);
+        //echo get_post_meta($post->ID, "email", true); 
+        if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();?>
+                <div class="col-sm-6 col-md-3" id="service-wrap">
+                    <?php echo wp_get_attachment_image(get_post_meta($post->ID, "home_image", true))?>
                     <h4><?php echo the_title(); ?></h4>
-                    <p><?php echo the_excerpt(); ?></p>
-                    <a href="<?php echo get_permalink(); ?>"> Read More...</a>
+                    <?php echo get_post_meta($post->ID, "summery", true);?>
+<!--                    <p><?php echo the_excerpt(); ?></p>-->
+<!--                    <a href="<?php echo get_permalink(); ?>"> Read More...</a>-->
                 </div>
                 <?php
             endwhile;
         endif;
         ?> 
     </section><!--end of section-1-->
-<!--section-2 services, category- Employment services-->
+    <!--section-2 Testimonials-->
+    <div class="blue-bar margin-maker"><h4>RECENT FEEDBACKS</h4></div>
     <section class="row">
-        <div class="blue-bar margin-maker"><h4>EMPLOYMENT SERVICES</h4></div>
-        <?php
-        $args = array(
-            'post_type' => 'services',
-            'post_status' => 'publish',
-            'showposts' => -1,
-            'tax_query' => array(array(
-                    'taxonomy' => 'category',
-                    'field' => 'slug',
-                    'terms' => 'Employment'
-                )),
-            'orderby' => 'date',
-            'order' => 'DESC'
-        );
-        $loop = new WP_Query($args);
-        if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
-                ?>
-                <div class="col-md-3 col-xs-6" id="service-wrap">
-                    <?php
-                    if (has_post_thumbnail()) {
-                        the_post_thumbnail();
-                    }
-                    ?>
-                    <h4><?php echo the_title(); ?></h4>
-                    <p><?php echo the_excerpt(); ?></p>
-                    <a href="<?php echo get_permalink(); ?>"> Read More...</a>
-                </div>
-                <?php
-            endwhile;
-        endif;
-        ?> 
-    </section><!--end of section-2-->
-<!--section-3 Testimonials-->
-    <section class="row">
-        <div class="blue-bar margin-maker"><h4>RECENT TESTIMONIALS</h4></div>
         <?php
         $args = array(
             'post_type' => 'testimonials',
@@ -115,14 +75,14 @@ get_header();
         ?>
     </section><!--end of section-3-->
     <!--section-3.1 Partners-->
-    <section class="row">
+<!--    <section class="row">
         <div class="blue-bar margin-maker"><h4>OUR PARTNERS</h4></div>
         <div class="col-md-12">
             
         </div>
-    </section><!--end of section-3.1 Partners-->
+    </section>end of section-3.1 Partners-->
 <!--section-4 Blog post-->
-    <section class="row">
+<!--    <section class="row">
         <div class="blue-bar margin-maker"><h4>RECENT BLOG POST</h4></div>
         <?php
         $postslist = get_posts('numberposts=4&order=DESC&orderby=date');
@@ -140,7 +100,7 @@ get_header();
                 <a href="<?php echo get_permalink(); ?>"> Read More...</a>
             </div>
         <?php } ?>
-    </section><!--end of section-4-->
+    </section>end of section-4-->
 </div><!--end of main container-->
 
 <?php get_footer(); ?>

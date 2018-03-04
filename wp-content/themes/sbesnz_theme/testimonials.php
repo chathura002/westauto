@@ -8,6 +8,7 @@ get_header();
 ?> 
 
 <div class="main-container" id="container-wrap">
+    <div class="blue-bar margin-maker"><h4>RECENT FEEDBACKS</h4></div>
     <section class="row" id="testimonials">
         <div class="column-wrap">
             <?php query_posts(array('post_type' => 'testimonials', 'post_status' => 'publish', 'showposts' => -1)); ?>
